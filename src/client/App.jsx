@@ -124,7 +124,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    fetch("/games").then(response => response.json()).then(data => {
+    fetch("/api/games").then(response => response.json()).then(data => {
       renderGames(data);
     });
   }, []);
