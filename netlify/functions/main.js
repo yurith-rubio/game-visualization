@@ -5,7 +5,7 @@ const app = express();
 
 import { serverless } from 'serverless-http';
 
-import { SteamAPI } from 'steamapi';
+import SteamAPI from 'steamapi';
 const steam = new SteamAPI(process.env.STEAM_API_KEY);
 
 app.get("/", function (req, res) {
