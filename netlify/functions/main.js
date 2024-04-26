@@ -3,7 +3,7 @@ require('dotenv').config();
 import express from 'express'
 const app = express();
 
-import { serverless } from 'serverless-http';
+import serverless from 'serverless-http';
 
 import SteamAPI from 'steamapi';
 const steam = new SteamAPI(process.env.STEAM_API_KEY);
