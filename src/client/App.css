@@ -1,0 +1,49 @@
+body{
+  background-color: #000133;
+}
+/*circle{
+  fill: #8e2222;
+}*/
+#svgCirclesWrapper{
+  width: 100vw;
+  height: 100vh;
+}
+.gameTitle.h1{
+  font-size: 50px;
+  position: absolute;
+  bottom: 300px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.circle{
+  cursor: pointer;
+}
+.svg-shape{
+  width: 10px;
+  height: 10px;
+}
+.text{
+  opacity: 0;
+}
+.text:not(.number){
+  font-weight: bold;
+}
+.text.textShows{
+  animation: textShows 1s forwards;
+}
+#background{
+  position: absolute;
+  height: 100vh;
+  width: 100vh;
+}
+@keyframes textShows {
+  from{
+    opacity: 0;
+    translate: 0 20px;
+  }
+  to{
+    opacity: 1;
+    translate: 0 0;
+  }
+}
