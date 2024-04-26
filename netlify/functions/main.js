@@ -1,11 +1,16 @@
 require('dotenv').config();
 
-const express = require("express");
+import * as express from 'express'
 const app = express();
-const serverless = require('serverless-http');
 
-const SteamAPI = require("steamapi");
+import { serverless } from 'serverless-http';
+
+import { SteamAPI } from 'steamapi';
 const steam = new SteamAPI(process.env.STEAM_API_KEY);
+
+app.get("/", function (req, res) {
+    return res.send('hello world');
+});
 
 app.get("/games", function (req, res) {
   const id = req.params.gameid;
