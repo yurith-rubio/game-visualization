@@ -11,6 +11,8 @@ const steam = new SteamAPI(process.env.STEAM_API_KEY);
 
 app.get("/games", function (req, res) {
   const id = req.params.gameid;
+  console.log("id inside get request");
+  console.log(id);
   steam.getUserOwnedGames(process.env.STEAM_USER_ID).then(games => {
     return res.json(games);
   }).catch(error => {
