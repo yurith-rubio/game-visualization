@@ -5,6 +5,7 @@ const express = require("express");
 const ViteExpress = require("vite-express");
 
 const app = express();
+const serverless = require('serverless-http');
 
 const SteamAPI = require("steamapi");
 const steam = new SteamAPI(process.env.STEAM_API_KEY);
@@ -25,6 +26,10 @@ app.get("/hello", (req, res) => {
   res.send("Hello Vite + React!");
 });
 
+export const handler = serverless(app);
+
+/*
 ViteExpress.listen(app, 3000, () =>
   console.log("Server is listening on port 3000...")
 );
+*/
